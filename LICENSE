@@ -1,0 +1,153 @@
+# War of Machines Freeware License — Bulgarian (prevailing) and English texts
+
+Version 1.0 (2026-11-02). The Bulgarian text prevails to the extent permitted by law (clause 15.3).
+
+---
+
+## Безплатен лиценз на War of Machines (War of Machines Freeware License)
+
+Версия 1.0 (02.11.2026).
+Авторско право © 2026 Александър Христов / RitualForge Labs. Всички права запазени, освен изрично предоставените по-долу.
+
+Това е собственически безплатен лиценз (freeware). Той **не е** лиценз с отворен код и не е одобрен от Open Source Initiative (OSI), нито се представя като съответстващ на определението на OSI.
+
+### 1. Определения
+1.1. **„Лицензодател“** — Александър Христов (RitualForge Labs), носител на авторското право върху Софтуера.
+1.2. **„Софтуер“** — приложението War of Machines във вида, в който се разпространява от Лицензодателя, включително компилираната програма, скриптовете за инсталиране и деинсталиране, преводите, изображенията и документацията, както и обновленията, публикувани от Лицензодателя по този Лиценз. Външните компоненти не са част от Софтуера за целите на този Лиценз.
+1.3. **„Официална версия“** — копие на Софтуера, получено непроменено от официалния канал за разпространение: https://github.com/PhoenixbgOrg/war-of-machines (включително страницата Releases).
+1.4. **„Модифицирана версия“** — всяко копие или произведение, което променя, допълва, премахва части от, декомпилира в променен вид или е производно на Софтуера, различно от непроменена Официална версия.
+1.5. **„Външни компоненти“** — софтуер, библиотеки, среди за изпълнение, данни, услуги и знаци, които не принадлежат на Лицензодателя, включително включените в пакета (напр. Python, Qt, PySide6, shiboken6, OpenSSL, httpx, keyring, cryptography, certifi), както и услугите на доставчиците на ИИ.
+1.6. **„Вие“** — всяко физическо или юридическо лице, което използва Софтуера.
+
+### 2. Форма на разпространение
+2.1. Софтуерът се разпространява като компилиран самостоятелен изпълним пакет. Изходният му код не се разпространява заедно с него.
+2.2. Нищо в този Лиценз не Ви дава право да получите, да достъпите или да изисквате изходния код на Софтуера. Това не засяга изходен код, обектни файлове или други материали, на които имате право по собствения лиценз на Външен компонент (вж. раздел 10).
+
+### 3. Предоставяне на лиценз
+3.1. При спазване на този Лиценз Лицензодателят Ви предоставя безвъзмездна, неизключителна, непрехвърлима, без право на подлицензиране, валидна по целия свят лицензия да изтегляте, инсталирате и използвате Официалната версия за лично ползване и за вътрешно ползване във Вашата организация (включително дружества, учебни заведения и публични органи), на неограничен брой устройства.
+3.2. Можете да правите копия, разумно необходими за инсталиране и резервно копие.
+3.3. Можете да споделяте връзки към Официалната версия. Можете безплатно да споделяте непроменени копия на пълния пакет на Официалната версия, като този Лиценз и всички уведомления се запазват непокътнати; за всичко останало се прилага раздел 4.
+
+### 4. Ограничения
+Без предварително писмено разрешение от Лицензодателя нямате право:
+4.1. да продавате, препродавате, отдавате под наем или лизинг, да подлицензирате или по друг начин търговски да разпространявате Софтуера, или да го включвате в платен продукт, пакет или платено разпространение;
+4.2. публично да разпространявате, публикувате или предоставяте Модифицирана версия (включително чрез изтегляне, магазини за приложения, хранилища за пакети или хоствани услуги);
+4.3. да представяте неофициална или Модифицирана версия като официална или като създадена или одобрена от Лицензодателя;
+4.4. да премахвате или променяте уведомления за авторско право, лиценз, авторство или външни компоненти.
+
+### 5. Лични модификации
+5.1. Можете да модифицирате Софтуера или код на Софтуера, с който законно разполагате, за Ваше лично или вътрешно ползване, при условие че Модифицираната версия не се разпространява публично (т. 4.2).
+5.2. Това разрешение не създава право да получите изходен код (т. 2.2).
+5.3. Нищо в този Лиценз не изключва действия, разрешени от императивни норми на закона (например по правилата, въвеждащи Директива 2009/24/ЕО за правната закрила на компютърните програми).
+
+### 6. API ключове и разходи към доставчиците
+Софтуерът се свързва с външни доставчици на ИИ само с API ключове, които Вие предоставяте. Вие носите изцяло отговорност за профилите и ключовете си при доставчиците, за спазването на техните условия и за всички такси и разходи, начислявани от тях. Лицензодателят не препродава, не посредничи и не заплаща услуги на доставчици.
+
+### 7. Отказ от отговорност за резултатите от ИИ
+Резултатите се генерират от външни модели на ИИ и могат да бъдат грешни, непълни, остарели, пристрастни или опасни. Съгласието или „консенсусът“ между модели не доказва верност. Вие отговаряте за проверката на резултатите, преди да разчитате на тях, особено при правни, медицински, финансови решения или решения, свързани с безопасност. Вграденият симулационен доставчик не е изкуствен интелект.
+
+### 8. Доброволна подкрепа
+Софтуерът е безплатен. Доброволната подкрепа (например чрез връзката PayPal.Me в приложението) е изцяло по желание, не е покупка, не отключва функции и не създава задължения за Лицензодателя.
+
+### 9. Име и изображения
+„War of Machines“, неговите лога, банери и рекламни изображения могат да се използват непроменени само за обозначаване, представяне, препращане към или споделяне на Официалната версия. Други права върху тях не се предоставят.
+
+### 10. Външни компоненти и Вашите права по техните лицензи
+10.1. Външните компоненти Ви се лицензират по собствените им лицензи, изброени в THIRD_PARTY_NOTICES.md и папката THIRD_PARTY_LICENSES/. Всички изисквания за авторско право, лиценз и уведомления за тях се запазват.
+10.2. **Този Лиценз не ограничава, не стеснява и не заменя правата, които имате по лицензите на Външните компоненти**, включително GNU Lesser General Public License (LGPL), GNU General Public License (GPL), Mozilla Public License (MPL), Apache License и други. По-специално можете да заменяте, променяте и свързвате наново библиотеките Qt и PySide6, които се доставят като отделни файлове на споделени библиотеки, както допуска LGPL версия 3, и можете да прилагате обратно инженерство на Софтуера, доколкото това е необходимо за отстраняване на грешки в такива промени. При противоречие между този Лиценз и лиценза на Външен компонент по отношение на този компонент предимство има лицензът на Външния компонент.
+
+### 11. По-ранни версии
+Правата, предоставени по лиценза MIT за по-рано публикувани версии на Софтуера, не се отменят и не се засягат със задна дата. Този Лиценз се прилага за версия 0.1.1-beta и следващите версии, публикувани по него.
+
+### 12. Липса на гаранции
+Доколкото приложимото право допуска, Софтуерът се предоставя „както е“ и „както е наличен“, без каквито и да е изрични или подразбиращи се гаранции, включително за търговска годност, пригодност за определена цел, точност и ненарушаване на права.
+
+### 13. Ограничаване на отговорността
+13.1. Доколкото приложимото право допуска, Лицензодателят не носи отговорност за непреки, случайни, специални или последващи вреди, загуба на данни, печалби или такси към доставчици, произтичащи от използването или невъзможността за използване на Софтуера или на резултатите от него.
+13.2. Нищо в този Лиценз не изключва и не ограничава отговорност, която не може да бъде изключена или ограничена по приложимото право, включително отговорност за умисъл или груба небрежност, както и императивните права на потребителите по българското право и правото на Европейския съюз.
+
+### 14. Прекратяване
+Този Лиценз се прекратява автоматично, ако го нарушите съществено. При прекратяване трябва да спрете използването и разпространението на Софтуера. Раздели 7, 10–15 остават в сила. Прекратяването не засяга правата Ви по лицензите на Външните компоненти.
+
+### 15. Приложимо право, подсъдност и език
+15.1. Този Лиценз се урежда от правото на Република България, без да се засягат императивните правила за защита на потребителите на държавата, в която потребителят обичайно пребивава.
+15.2. Споровете се решават от компетентния български съд, определен съгласно приложимото законодателство.
+15.3. Този Лиценз е издаден на български и английски език. Доколкото законът допуска, при разминаване предимство има българският текст.
+
+### 16. Контакт
+Разрешения и въпроси: info@ritualforgelabs.com
+
+---
+
+## War of Machines Freeware License
+
+Version 1.0 (2026-11-02).
+Copyright © 2026 Alexander Hristov / RitualForge Labs. All rights reserved except as expressly granted below.
+
+This is a proprietary freeware licence. It is **not** an open-source licence and is not approved by, or presented as compliant with, the Open Source Initiative (OSI).
+
+### 1. Definitions
+1.1. **"Licensor"** — Alexander Hristov (RitualForge Labs), the copyright holder of the Software.
+1.2. **"Software"** — the War of Machines application as distributed by the Licensor, including the compiled program, installer and uninstaller scripts, translations, images and documentation, and updates the Licensor publishes under this License. Third-Party Components are not part of the Software for the purposes of this License.
+1.3. **"Official Version"** — a copy of the Software obtained unmodified from the official distribution channel: https://github.com/PhoenixbgOrg/war-of-machines (including its Releases page).
+1.4. **"Modified Version"** — any copy or work that alters, adds to, removes parts of, decompiles into a changed form, or is derived from the Software, other than an unmodified Official Version.
+1.5. **"Third-Party Components"** — software, libraries, runtimes, data, services and marks not owned by the Licensor, including those bundled in the distribution package (e.g. Python, Qt, PySide6, shiboken6, OpenSSL, httpx, keyring, cryptography, certifi) and AI provider services.
+1.6. **"You"** — any natural person or legal entity using the Software.
+
+### 2. Form of distribution
+2.1. The Software is distributed as a compiled, standalone binary package. Its source code is not distributed with it.
+2.2. Nothing in this License grants You any right to receive, access or demand the source code of the Software. This does not affect source code, object files or other materials that a Third-Party Component's own licence entitles You to (see Section 10).
+
+### 3. Licence grant
+3.1. Subject to this License, the Licensor grants You a free-of-charge, non-exclusive, non-transferable, non-sublicensable, worldwide licence to download, install and use the Official Version for personal use and for internal use within Your organization (including companies, educational institutions and public bodies), on any number of devices.
+3.2. You may make copies reasonably necessary for installation and backup.
+3.3. You may share links to the Official Version. You may share unmodified copies of the complete Official Version package free of charge, with this License and all notices intact, but Section 4 applies to everything else.
+
+### 4. Restrictions
+Without the Licensor's prior written permission You may not:
+4.1. sell, resell, rent, lease, sublicense or otherwise commercially distribute the Software, or include it in a paid product, bundle or paid distribution;
+4.2. publicly distribute, publish or make available a Modified Version (including via download, app stores, package repositories or hosted services);
+4.3. present an unofficial or Modified Version as official, or as made or endorsed by the Licensor;
+4.4. remove or alter copyright, licence, attribution or third-party notices.
+
+### 5. Personal modifications
+5.1. You may modify the Software, or code of the Software that You lawfully possess, for Your own personal or internal use, provided that the Modified Version is not publicly distributed (Section 4.2).
+5.2. This permission does not create any right to obtain source code (Section 2.2).
+5.3. Nothing in this License excludes acts permitted by mandatory law (for example under the rules implementing Directive 2009/24/EC on the legal protection of computer programs).
+
+### 6. API keys and provider costs
+The Software connects to third-party AI providers only with API keys that You supply. You are solely responsible for Your provider accounts, keys, compliance with the providers' terms, and all fees and costs charged by the providers. The Licensor does not resell, proxy or pay for any provider service.
+
+### 7. AI output disclaimer
+Output is generated by third-party AI models and may be wrong, incomplete, outdated, biased or unsafe. Agreement or "consensus" between models is not proof of correctness. You are responsible for checking output before relying on it, especially for legal, medical, financial or safety-relevant decisions. The built-in simulation provider is not artificial intelligence.
+
+### 8. Voluntary support
+The Software is free of charge. Voluntary support (for example via the PayPal.Me link in the application) is entirely optional, is not a purchase, does not unlock features and does not create any obligation of the Licensor.
+
+### 9. Name and images
+"War of Machines", its logos, banners and promotional images may be used unchanged only to identify, present, link to or share the Official Version. No other rights in them are granted.
+
+### 10. Third-Party Components and Your rights under their licences
+10.1. Third-Party Components are licensed to You under their own licences, listed in THIRD_PARTY_NOTICES.md and the THIRD_PARTY_LICENSES/ folder. All their copyright, licence and notice requirements are preserved.
+10.2. **This License does not restrict, limit or replace any right You have under the licences of Third-Party Components**, including the GNU Lesser General Public License (LGPL), the GNU General Public License (GPL), the Mozilla Public License (MPL), the Apache License and other licences. In particular, You may replace, modify and relink the Qt and PySide6 libraries, which are shipped as separate shared library files, as permitted by the LGPL version 3, and You may reverse-engineer the Software to the extent needed to debug such modifications. Where this License conflicts with a Third-Party Component's licence as regards that component, the Third-Party Component's licence prevails.
+
+### 11. Earlier versions
+Rights granted under the MIT License for earlier published versions of the Software are not revoked or affected retroactively. This License applies to version 0.1.1-beta and later versions published under it.
+
+### 12. No warranty
+To the extent permitted by applicable law, the Software is provided "as is" and "as available", without warranty of any kind, express or implied, including merchantability, fitness for a particular purpose, accuracy and non-infringement.
+
+### 13. Limitation of liability
+13.1. To the extent permitted by applicable law, the Licensor is not liable for indirect, incidental, special or consequential damages, loss of data, profits or provider fees, arising from use of or inability to use the Software or its output.
+13.2. Nothing in this License excludes or limits liability that cannot be excluded or limited under applicable law, including liability for intent or gross negligence, or the mandatory rights of consumers under Bulgarian and European Union law.
+
+### 14. Termination
+This License terminates automatically if You materially breach it. On termination You must stop using and distributing the Software. Sections 7, 10–15 survive. Termination does not affect Your rights under Third-Party Component licences.
+
+### 15. Governing law, jurisdiction and language
+15.1. This License is governed by the laws of the Republic of Bulgaria, without prejudice to mandatory consumer-protection rules of the country of a consumer's habitual residence.
+15.2. Disputes are resolved by the competent Bulgarian court determined under applicable law.
+15.3. This License is issued in Bulgarian and English. To the extent permitted by law, the Bulgarian text prevails in case of discrepancy.
+
+### 16. Contact
+Permissions and questions: info@ritualforgelabs.com

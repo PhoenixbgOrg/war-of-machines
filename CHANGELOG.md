@@ -1,6 +1,9 @@
 # Changelog
 
-## 0.1.1-beta — unreleased (prepared, not published)
+## 0.1.1-beta — 2026-11-02 (Public Beta, pre-release)
+- Privacy by design: no telemetry or tracking; automatic update check at startup is off by default; no request identifier sent to cloud providers; stronger log redaction; privacy note in About. See PRIVACY_EN.md / PRIVACY_BG.md.
+- Licence: War of Machines Freeware License v1.0 (LICENSE).
+- Поверителност по замисъл: без телеметрия и проследяване; автоматичната проверка за обновления е изключена по подразбиране; бележка за поверителност в „За проекта“. Лиценз: War of Machines Freeware License v1.0.
 
 - New official project page with a clean history (this repository).
 - About window shows the build type, version and Git commit.

@@ -2,6 +2,12 @@
   <img src="docs/assets/promo/war-of-machines-readme-banner-900.png" width="900" alt="War of Machines — multiple AI models, one task, shared reasoning">
 </p>
 
+<p align="center"><b>PRIVACY IS A PRINCIPLE, NOT AN OPTIONAL FEATURE.</b></p>
+
+<p align="center">War of Machines does not collect telemetry, user conversations, API keys, or usage history for RitualForge Labs. Application data is stored locally. When cloud AI models are used, selected requests are sent directly to the respective provider.</p>
+
+<p align="center"><code>No telemetry · No tracking · Local-first · Your API keys · Your data</code><br><a href="PRIVACY_EN.md">Privacy policy (EN)</a> · <a href="PRIVACY_BG.md">Политика за поверителност (BG)</a></p>
+
 <p align="center"><b>English</b> · <a href="README_BG.md">Български</a></p>
 
 # War of Machines
@@ -19,6 +25,7 @@ A free desktop application in which several AI models from different providers w
 - [Verification status](#verification-status)
 - [Download and install](#download-and-install)
 - [Screenshots](#screenshots)
+- [Feedback](#feedback)
 - [Licensing](#licensing)
 
 ## What it is and why it was created
@@ -83,7 +90,7 @@ Tested on Debian 13 XFCE.
 
 ## Download and install
 
-> **Status: PREPARED.** v0.1.1-beta has not been published yet, so there is no download yet. The steps below **will apply to v0.1.1-beta** once it appears under [Releases](../../releases).
+> **v0.1.1-beta (pre-release)** is available under [Releases](../../releases/tag/v0.1.1-beta). Download `war-of-machines-0.1.1-beta-linux-x86_64.tar.gz` and `SHA256SUMS`.
 
 v0.1.1-beta is a **standalone compiled program for Linux x86_64**.
 - It needs no Python and downloads nothing during installation.
@@ -101,7 +108,6 @@ sudo apt install libxcb-cursor0 libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 l
 A Secret Service keyring (for example `gnome-keyring` or KeePassXC) is needed to save API keys.
 
 ```bash
-# will apply to v0.1.1-beta
 sha256sum -c SHA256SUMS
 tar xzf war-of-machines-0.1.1-beta-linux-x86_64.tar.gz
 cd war-of-machines-0.1.1-beta-linux-x86_64
@@ -126,9 +132,14 @@ All screenshots use **synthetic demo data** and fake keys.
 | ![Mode A result produced by the simulator, marked as not real AI](docs/screenshots/mode-a-simulator-result-en.png) | |
 | Mode A result with the simulator (not real AI) | |
 
+## Feedback
+
+Feedback is voluntary. Report bugs or ideas in [GitHub Issues](../../issues) or by email to info@ritualforgelabs.com. Please **do not include API keys, passwords or private conversations**. The application sends nothing automatically. If you attach a log, the application already hides keys and home-directory paths in it, but please check it yourself first. GitHub and your email provider process what you send under their own terms.
+
 ## Licensing
 
-Licensing is being finalized; a War of Machines Freeware License will accompany the first release of v0.1.1-beta once published; until a release is published, no download or licence for the application code is granted by this repository page. See [LICENSING.md](LICENSING.md), [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and the [name and image notice](docs/assets/promo/NOTICE.md).
+War of Machines is **freeware** under the [War of Machines Freeware License v1.0](LICENSE) (Bulgarian and English text; the Bulgarian text prevails). The licence applies to the released program packages. This repository contains only the project page; the application source code is not published. See also [LICENSING.md](LICENSING.md), [PRIVACY_EN.md](PRIVACY_EN.md), [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and the [name and image notice](docs/assets/promo/NOTICE.md).
+
 
 Security issues: see [SECURITY.md](SECURITY.md). Changes: [CHANGELOG.md](CHANGELOG.md).
 
