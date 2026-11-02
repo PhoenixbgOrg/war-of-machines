@@ -83,18 +83,35 @@ Tested on Debian 13 XFCE.
 
 ## Download and install
 
-> **Status: PREPARED — v0.1.1-beta has not been published yet.** There is no download yet. The steps below **will apply to v0.1.1-beta** once it appears under [Releases](../../releases).
+> **Status: PREPARED.** v0.1.1-beta has not been published yet, so there is no download yet. The steps below **will apply to v0.1.1-beta** once it appears under [Releases](../../releases).
+
+v0.1.1-beta is a **standalone compiled program for Linux x86_64**.
+- It needs no Python and downloads nothing during installation.
+- It installs per user, with no root.
+- It is built for **Debian 13 (XFCE)**.
+- **Not tested, feedback from testers expected:** other distributions, Wayland and HiDPI.
+
+**Prerequisites (Debian 13).** These system libraries are usually already installed. `install.sh` checks for them and tells you if any are missing:
+
+```bash
+sudo apt install libxcb-cursor0 libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0 \
+     libxcb-render-util0 libxcb-shape0 libxcb-xkb1 libxcb-xfixes0 libx11-xcb1 libegl1 libgl1 libdbus-1-3 libfontconfig1 libglib2.0-0t64
+```
+
+A Secret Service keyring (for example `gnome-keyring` or KeePassXC) is needed to save API keys.
 
 ```bash
 # will apply to v0.1.1-beta
 sha256sum -c SHA256SUMS
-tar xzf war-of-machines-0.1.1-beta-linux.tar.gz
-cd war-of-machines-0.1.1-beta
+tar xzf war-of-machines-0.1.1-beta-linux-x86_64.tar.gz
+cd war-of-machines-0.1.1-beta-linux-x86_64
 ./install.sh
 war-of-machines
 ```
 
-`install.sh` creates a private Python environment and installs the dependencies from PyPI. Note that the "Source code" archives GitHub adds automatically to every release contain only this project page, not the application.
+- **Where it installs.** `install.sh` installs into `~/.local/share/war-of-machines` and adds a menu entry. It moves an older install aside and never deletes your data.
+- **Uninstall.** `./uninstall.sh` removes the program and keeps your data.
+- **Source code archives.** The "Source code" archives that GitHub adds automatically to every release contain only this project page, not the application.
 
 ## Screenshots
 

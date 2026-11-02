@@ -1,46 +1,73 @@
 # Third-party notices / Уведомления за компоненти на трети страни
 
-**War of Machines 0.1.1-beta (prepared, not released).** Versions below are those resolved by `pip` from `requirements.txt` on 2026-11-02 (Python 3.13, Linux x86_64); `install.sh` installs the then-current versions, which may differ.
+**War of Machines 0.1.1-beta, compiled standalone build for Linux x86_64 (Nuitka 4.3.4). Prepared, not released.** This page lists what the release package will contain. The `THIRD_PARTY_LICENSES/` folder mentioned below is inside the release package.
 
-**EN.** The War of Machines package does **not bundle or redistribute** any of the components below. The installer (`install.sh`) downloads them from PyPI into a per-user virtual environment on the user's machine; each component remains under its own licence, and the War of Machines licence does not apply to them. The notices are reproduced here for reference and to satisfy notice requirements should any component be redistributed in the future.
+**EN.** This package **bundles** the third-party components listed below in compiled or shared-library form. Each component remains under its own licence. The War of Machines Freeware License does not apply to them and **does not restrict any right you have under their licences** (Freeware License, clause 10.2). Full licence texts are in the `THIRD_PARTY_LICENSES/` folder.
 
-**BG.** Пакетът на War of Machines **не включва и не разпространява** компонентите по-долу. Инсталаторът (`install.sh`) ги изтегля от PyPI във виртуална среда на компютъра на потребителя; всеки компонент остава под своя лиценз и лицензът на War of Machines не се прилага за тях. Уведомленията са възпроизведени за справка.
+**BG.** Този пакет **включва** изброените по-долу компоненти на трети страни в компилиран вид или като споделени библиотеки. Всеки компонент остава под собствения си лиценз. Лицензът на War of Machines не се прилага за тях и **не ограничава правата Ви по техните лицензи** (т. 10.2). Пълните текстове са в папката `THIRD_PARTY_LICENSES/`.
 
-## Qt for Python (PySide6-Essentials, shiboken6) and Qt / Qt за Python
+## Qt and Qt for Python (PySide6, shiboken6): LGPL-3.0 notice
 
-War of Machines uses Qt for Python and Qt, licensed under the GNU Lesser General Public License v3 (LGPL-3.0-only; GPL-2.0/GPL-3.0 and commercial options also exist). The application only imports the unmodified PySide6 package installed from PyPI as a separate, replaceable library; users may replace it with another compatible (including modified) version. Source code: https://code.qt.io/ and https://download.qt.io/official_releases/QtForPython/ . Licence texts: https://www.gnu.org/licenses/lgpl-3.0.html , https://www.gnu.org/licenses/gpl-3.0.html . The PySide6 wheel installs Qt's own third-party notices with it.
+**This application uses Qt 6 and Qt for Python (PySide6) under the GNU Lesser General Public License version 3 (LGPL-3.0).** Qt is a trademark of The Qt Company Ltd. Versions: Qt 6.12.0, PySide6-Essentials 6.12.0, shiboken6 6.12.0, all unmodified.
+- **Separate, replaceable libraries.** All Qt, PySide6 and shiboken6 code is shipped as separate shared libraries in `app/`. There is no onefile archive.
+  - `app/libQt6*.so.6` and `app/libicu*.so.73`
+  - `app/libpyside6.abi3.so.6.12` and `app/libshiboken6.abi3.so.6.12`
+  - `app/PySide6/QtCore.so`, `QtGui.so` and `QtWidgets.so`
+  - `app/shiboken6/Shiboken.so`
+  - the `app/PySide6/qt-plugins/` folder
+- **Replacing them.** To use a modified or different build of Qt 6.12 / PySide6 6.12, build it with the same ABI (x86_64, glibc ≤ 2.41, Qt 6.12 binary compatibility). Then overwrite the matching files in `~/.local/share/war-of-machines/app/` (or the unpacked `app/` folder) and start the program. The executable loads these libraries from its own directory at run time (RPATH `$ORIGIN`), so the executable itself does not need to be relinked. To check what is actually loaded, use `ldd ~/.local/share/war-of-machines/app/war-of-machines` or `LD_DEBUG=libs`.
+- **Source code** for the exact versions:
+  - Qt 6.12.0: https://download.qt.io/official_releases/qt/6.12/6.12.0/single/
+  - Qt for Python 6.12.0: https://download.qt.io/official_releases/QtForPython/pyside6/ (sdist `pyside6-6.12.0`) and https://code.qt.io/cgit/pyside/pyside-setup.git/tag/?h=v6.12.0
+  - Copies of the source for these versions can also be requested from info@ritualforgelabs.com for at least three years after this release.
+- **Licence texts:** `THIRD_PARTY_LICENSES/PySide6_Essentials-6.12.0/` and `THIRD_PARTY_LICENSES/shiboken6-6.12.0/` contain the LGPL-3.0, GPL-3.0 and GPL-2.0 texts.
+- **Third-party code inside Qt** (ICU, harfbuzz, freetype, libpng, libjpeg, pcre2, md4c, double-conversion, zlib and others) is listed at https://doc.qt.io/qt-6/licenses-used-in-qt.html. The ICU licence is in `THIRD_PARTY_LICENSES/ICU-73-bundled-by-Qt/`.
+- **No GPL-only Qt modules** are included. The Qt Virtual Keyboard plugin is removed at build time.
+- You may reverse-engineer War of Machines to the extent needed to debug your modifications of these libraries (LGPL-3.0 §4 and Freeware License clause 10.2).
 
-BG: War of Machines използва Qt for Python и Qt под LGPL-3.0-only. Приложението само импортира непроменения пакет PySide6 от PyPI като отделна, заменима библиотека.
+**BG.** Приложението използва Qt 6 и Qt for Python (PySide6) под GNU LGPL версия 3.
+- Библиотеките са отделни файлове `.so` в папката `app/` и можете да ги замените със съвместима (включително променена) версия 6.12, като презапишете съответните файлове. Изпълнимият файл ги зарежда от собствената си папка.
+- Изходният код е на връзките по-горе.
 
 ## Other trademarks / Други търговски марки
 
-`wom/assets/paypal-mark-color.svg` (bundled, unmodified, from https://www.paypalobjects.com/): PayPal and the PayPal logo are trademarks of PayPal, Inc., used only to identify the voluntary donation button; no affiliation or endorsement is implied. Provider names (OpenAI, xAI, Anthropic, Google Gemini, Mistral, DeepSeek, OpenRouter, Ollama) are trademarks of their owners and are used only to identify compatible services.
+`wom/assets/paypal-mark-color.svg` is bundled unmodified, from https://www.paypalobjects.com/. PayPal and the PayPal logo are trademarks of PayPal, Inc. They are used only to identify the voluntary support button; no affiliation or endorsement is implied. Provider names (OpenAI, xAI, Anthropic, Google Gemini, Mistral, DeepSeek, OpenRouter, Ollama) are trademarks of their owners and are used only to identify compatible services.
 
-## Component list / Списък
+## Bundled components / Включени компоненти
 
-| Component | Version | Licence | Required by | Bundled in package |
+| Component | Version | Licence | Form in package | Licence text in THIRD_PARTY_LICENSES/ |
 |---|---|---|---|---|
-| PySide6-Essentials | 6.12.0 | LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only (Qt also offers a commercial licence) | direct | no (installed from PyPI) |
-| shiboken6 | 6.12.0 | LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only | PySide6 | no (installed from PyPI) |
-| httpx | 0.28.1 | BSD-3-Clause | direct | no (installed from PyPI) |
-| httpcore | 1.0.9 | BSD-3-Clause | httpx | no (installed from PyPI) |
-| h11 | 0.16.0 | MIT | httpcore | no (installed from PyPI) |
-| anyio | 4.16.0 | MIT | httpx | no (installed from PyPI) |
-| idna | 3.20 | BSD-3-Clause | httpx | no (installed from PyPI) |
-| certifi | 2026.10.23 | MPL-2.0 | httpx | no (installed from PyPI) |
-| typing_extensions | 4.16.0 | PSF-2.0 | anyio | no (installed from PyPI) |
-| keyring | 25.7.0 | MIT | direct | no (installed from PyPI) |
-| jaraco.classes | 3.4.0 | MIT | keyring | no (installed from PyPI) |
-| jaraco.context | 6.1.2 | MIT | keyring | no (installed from PyPI) |
-| jaraco.functools | 4.6.0 | MIT | keyring | no (installed from PyPI) |
-| more-itertools | 11.2.1 | MIT | jaraco.* | no (installed from PyPI) |
-| SecretStorage | 3.5.0 | BSD-3-Clause | keyring (Linux) | no (installed from PyPI) |
-| jeepney | 0.9.0 | MIT | keyring / SecretStorage | no (installed from PyPI) |
-| cryptography | 50.0.2 | Apache-2.0 OR BSD-3-Clause (Linux wheels also contain OpenSSL, Apache-2.0) | direct + SecretStorage | no (installed from PyPI) |
-| cffi | 2.1.1 | MIT-0 | cryptography | no (installed from PyPI) |
-| pycparser | 3.12 | BSD-3-Clause | cffi | no (installed from PyPI) |
+| Qt 6 (Core, Gui, Widgets, DBus, Network, OpenGL, PrintSupport, Svg, XcbQpa, WaylandClient, WlShellIntegration, EglFS*, Qml*, Quick, plugins) | 6.12.0 | LGPL-3.0 (chosen option of LGPL-3.0/GPL-2.0/GPL-3.0) | shared libraries | PySide6_Essentials-6.12.0/ |
+| PySide6-Essentials | 6.12.0 | LGPL-3.0 | shared libraries | PySide6_Essentials-6.12.0/ |
+| shiboken6 | 6.12.0 | LGPL-3.0 | shared libraries | shiboken6-6.12.0/ |
+| ICU (part of the Qt wheel) | 73 | Unicode License (ICU) | shared libraries | ICU-73-bundled-by-Qt/ |
+| Python runtime | 3.13.5 | PSF-2.0 | compiled into the executable | Python-3.13.5/ |
+| Nuitka runtime | 4.3.4 | AGPL-3.0 with the Nuitka Runtime Library Exception | compiled into the executable | Nuitka-runtime-4.3.4/ |
+| httpx | 0.28.1 | BSD-3-Clause | compiled | httpx-0.28.1/ |
+| httpcore | 1.0.9 | BSD-3-Clause | compiled | httpcore-1.0.9/ |
+| h11 | 0.16.0 | MIT | compiled | h11-0.16.0/ |
+| anyio | 4.16.0 | MIT | compiled | anyio-4.16.0/ |
+| idna | 3.20 | BSD-3-Clause | compiled | idna-3.20/ |
+| certifi | 2026.10.23 | MPL-2.0 (unmodified; source: https://github.com/certifi/python-certifi) | compiled + cacert.pem | certifi-2026.10.23/ |
+| typing_extensions | 4.16.0 | PSF-2.0 | compiled | typing_extensions-4.16.0/ |
+| keyring | 25.7.0 | MIT | compiled | keyring-25.7.0/ |
+| jaraco.classes / jaraco.context / jaraco.functools | 3.4.0 / 6.1.2 / 4.6.0 | MIT | compiled | jaraco*/ |
+| more-itertools | 11.2.1 | MIT | compiled | more_itertools-11.2.1/ |
+| SecretStorage | 3.5.0 | BSD-3-Clause | compiled | secretstorage-3.5.0/ |
+| jeepney | 0.9.0 | MIT | compiled | jeepney-0.9.0/ |
+| cryptography (incl. statically linked OpenSSL 4.0.3) | 50.0.2 | Apache-2.0 OR BSD-3-Clause; OpenSSL Apache-2.0 | shared library `_rust.so` | cryptography-50.0.2/, OpenSSL/ |
+| cffi backend | 2.1.1 | MIT-0 | shared library | cffi-2.1.1/ |
+| zstandard | 0.25.0 | BSD-3-Clause | shared library | zstandard-0.25.0/ |
+| OpenSSL (libssl, libcrypto) | 3.5.7 (Debian 13) | Apache-2.0 | shared libraries | OpenSSL/, debian-libssl3t64/ |
+| libffi | 3.4.8 | MIT | shared library | debian-libffi8/ |
+| SQLite | 3.46.1 | Public domain | shared library | debian-libsqlite3-0/ |
+| expat | 2.9.0 | MIT | shared library | debian-libexpat1/ |
+| bzip2 | 1.0.8 | bzip2 licence | shared library | debian-libbz2-1.0/ |
+| xz (liblzma) | 5.8.1 | 0BSD / public domain | shared library | debian-liblzma5/ |
+| libuuid (util-linux) | 2.41.5 | BSD-3-Clause | shared library | debian-libuuid1/ |
+| zstd (libzstd) | 1.5.7 | BSD-3-Clause | shared library | debian-libzstd1/ |
 
-certifi (MPL-2.0): source and licence https://github.com/certifi/python-certifi , https://mozilla.org/MPL/2.0/ . typing_extensions (PSF-2.0): https://github.com/python/typing_extensions/blob/main/LICENSE . cryptography is dual-licensed; the BSD text is reproduced below, the Apache-2.0 text is at https://www.apache.org/licenses/LICENSE-2.0 .
+Not bundled (system prerequisites of the user's Debian installation): glibc, libstdc++, X11/xcb, EGL/GL, D-Bus, fontconfig/freetype, GTK 3 (optional theme), CUPS (optional printing).
 
 ## Licence texts (MIT, BSD, MIT-0) reproduced verbatim from the installed packages
 

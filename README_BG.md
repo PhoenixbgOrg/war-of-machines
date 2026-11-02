@@ -83,18 +83,35 @@ Tested on Debian 13 XFCE. (Тествано на Debian 13 XFCE.)
 
 ## Изтегляне и инсталиране
 
-> **Състояние: ПОДГОТВЕНО — v0.1.1-beta все още не е публикувана.** Засега няма файл за изтегляне. Стъпките по-долу **ще важат за v0.1.1-beta**, когато се появи в [Releases](../../releases).
+> **Състояние: ПОДГОТВЕНО.** v0.1.1-beta все още не е публикувана и засега няма файл за изтегляне. Стъпките по-долу **ще важат за v0.1.1-beta**, когато се появи в [Releases](../../releases).
+
+v0.1.1-beta е **самостоятелна компилирана програма за Linux x86_64**.
+- Не изисква Python и не изтегля нищо при инсталиране.
+- Инсталира се за потребителя, без root.
+- Предназначена е за **Debian 13 (XFCE)**.
+- **Не е тествано, очаква се обратна връзка от тестери:** други дистрибуции, Wayland и HiDPI.
+
+**Предварителни изисквания (Debian 13).** Тези системни библиотеки обикновено вече са налични. `install.sh` ги проверява и съобщава, ако липсва някоя:
+
+```bash
+sudo apt install libxcb-cursor0 libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0 \
+     libxcb-render-util0 libxcb-shape0 libxcb-xkb1 libxcb-xfixes0 libx11-xcb1 libegl1 libgl1 libdbus-1-3 libfontconfig1 libglib2.0-0t64
+```
+
+За запазване на API ключове е нужен keyring със Secret Service (например `gnome-keyring` или KeePassXC).
 
 ```bash
 # ще важи за v0.1.1-beta
 sha256sum -c SHA256SUMS
-tar xzf war-of-machines-0.1.1-beta-linux.tar.gz
-cd war-of-machines-0.1.1-beta
+tar xzf war-of-machines-0.1.1-beta-linux-x86_64.tar.gz
+cd war-of-machines-0.1.1-beta-linux-x86_64
 ./install.sh
 war-of-machines
 ```
 
-`install.sh` създава отделна Python среда и инсталира зависимостите от PyPI. Архивите „Source code“, които GitHub добавя автоматично към всяко издание, съдържат само тази страница, а не приложението.
+- **Къде се инсталира.** `install.sh` инсталира в `~/.local/share/war-of-machines` и добавя запис в менюто. Старата инсталация се премества настрана и данните никога не се изтриват.
+- **Премахване.** `./uninstall.sh` премахва програмата и запазва данните.
+- **Архиви „Source code“.** Архивите „Source code“, които GitHub добавя автоматично към всяко издание, съдържат само тази страница, а не приложението.
 
 ## Екранни снимки
 
