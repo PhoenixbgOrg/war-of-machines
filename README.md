@@ -123,7 +123,7 @@ Created by <b>Alexander Hristov</b> · Developed under <b>RitualForge Labs</b><b
 </p>
 
 <p align="center">
-War of Machines is free and will stay without ads. If it is useful to you, you can support its development voluntarily — the application's About window shows how. Support is never required and does not unlock features.
+War of Machines is free and will stay without ads. If it is useful to you, you can support its development voluntarily via PayPal.Me: <a href="https://paypal.me/Hristov375">paypal.me/Hristov375</a>. The <i>Support via PayPal</i> button in the application's About window opens the same page in your browser. Support is never required and does not unlock features.
 </p>
 
 <p align="center">© 2026 Alexander Hristov / RitualForge Labs</p>
