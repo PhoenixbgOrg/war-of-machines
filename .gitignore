@@ -1,0 +1,14 @@
+# Local / editor files
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
+# Never commit local data, keys or environments
+*.sqlite3
+*.db
+*.log
+.env
+.venv/
+venv/
+__pycache__/
