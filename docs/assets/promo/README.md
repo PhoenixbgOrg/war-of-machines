@@ -2,7 +2,7 @@
 
 | File | Size | Use |
 |---|---|---|
-| `war-of-machines-master.png` | 1024×538 | master artwork |
+| `war-of-machines-master.png` | 1731×909 | master artwork |
 | `war-of-machines-github-social-preview-1280x640.png` | 1280×640 | GitHub social preview |
 | `war-of-machines-og-1200x630.png` | 1200×630 | Open Graph / link previews |
 | `war-of-machines-readme-banner-900.png` | 900×473 | README banner |
