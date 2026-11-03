@@ -104,7 +104,7 @@ Tested on Debian 13 XFCE.
 4. Start it from the menu or with `war-of-machines`. Create the local owner account, then open **Providers and models** to add an API key and press **Refresh models**. Without keys you can still try Mode A with the built-in **simulator** (not real AI).
 5. Installing over v0.2.0-beta.1 or v0.1.1-beta keeps your data and history.
 
-**Windows:** not yet available. A portable Windows build is being tested; when it is published, Windows may show a SmartScreen warning ("Windows protected your PC") because the program is not code-signed — check the SHA-256 first, then choose "More info → Run anyway" only if it matches.
+**Windows:** not yet available (planned targets: Windows 11 x64 and Windows 10 22H2 x64; note that Windows 10 is past Microsoft's standard end of support — testing is welcome but it is unverified). A portable Windows build is being tested; when it is published, Windows may show a SmartScreen warning ("Windows protected your PC") because the program is not code-signed — check the SHA-256 first, then choose "More info → Run anyway" only if it matches.
 
 ### Known bugs and limitations (v0.2.0-beta.2)
 - Hugging Face, OpenRouter, DeepSeek and the custom OpenAI-compatible endpoint were tested only against local fake servers (experimental).

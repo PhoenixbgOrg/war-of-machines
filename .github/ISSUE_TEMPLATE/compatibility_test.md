@@ -14,6 +14,8 @@ labels: compatibility
 
 **Desktop session / Сесия:** X11 / Wayland / Windows
 
+**Architecture / Архитектура:** (x86_64 / x64 / ARM64)
+
 **Screen scaling / Мащаб на екрана:** (e.g. 100%, 150%)
 
 **Result / Резултат:**
