@@ -90,7 +90,13 @@ Tested on Debian 13 XFCE. (Тествано на Debian 13 XFCE.)
 
 ## Изтегляне и инсталиране
 
-> **v0.1.1-beta (предварително издание)** е налична в [Releases](../../releases/tag/v0.1.1-beta). Изтеглете `war-of-machines-0.1.1-beta-linux-x86_64.tar.gz` и `SHA256SUMS`.
+| Издание | Етикет | Изтегляне |
+|---|---|---|
+| **v0.1.1-beta** | Публична бета (предварително издание) — препоръчваната текуща версия | [Releases → v0.1.1-beta](../../releases/tag/v0.1.1-beta): `war-of-machines-0.1.1-beta-linux-x86_64.tar.gz` + `SHA256SUMS` |
+| **v0.2.0-beta.1** | **TEST BUILD / Само за тестване** (предварително издание, за тестери) — Universal AI Pool: маршрути за достъп за всеки модел | [Releases → v0.2.0-beta.1](../../releases/tag/v0.2.0-beta.1): `war-of-machines-0.2.0-beta.1-linux-x86_64.tar.gz` + `SHA256SUMS` |
+
+Тестовата компилация добавя нови маршрути, които са **експериментални**: Hugging Face, „Провери лимитите“ на OpenRouter, DeepSeek и чат през OpenRouter са тествани само с локални фалшиви сървъри. Sign in with ChatGPT не е наличен; режим B не е реализиран. Инсталирането на v0.2.0-beta.1 върху v0.1.1-beta запазва историята (старите записи показват маршрута като „Неизвестно“). Вижте [CHANGELOG_BG.md](CHANGELOG_BG.md) / [CHANGELOG.md](CHANGELOG.md).
+
 
 v0.1.1-beta е **самостоятелна компилирана програма за Linux x86_64**.
 - Не изисква Python и не изтегля нищо при инсталиране.
@@ -115,6 +121,8 @@ cd war-of-machines-0.1.1-beta-linux-x86_64
 war-of-machines
 ```
 
+За тестовата компилация използвайте същите стъпки с `war-of-machines-0.2.0-beta.1-linux-x86_64` (със собствен `SHA256SUMS`).
+
 - **Къде се инсталира.** `install.sh` инсталира в `~/.local/share/war-of-machines` и добавя запис в менюто. Старата инсталация се премества настрана и данните никога не се изтриват.
 - **Премахване.** `./uninstall.sh` премахва програмата и запазва данните.
 - **Архиви „Source code“.** Архивите „Source code“, които GitHub добавя автоматично към всяко издание, съдържат само тази страница, а не приложението.
@@ -131,6 +139,10 @@ war-of-machines
 | Доставчици (BG) | За проекта (BG) |
 | ![Резултат от режим A със симулатора, отбелязан като нереален ИИ](docs/screenshots/mode-a-simulator-result-en.png) | |
 | Резултат от режим A със симулатора (не е реален ИИ) | |
+| ![Избор на маршрут в TEST BUILD v0.2.0-beta.1 със синтетичен каталог](docs/screenshots/v0.2-route-picker-en.png) | ![Прозорец „Какво е новото“ в TEST BUILD v0.2.0-beta.1](docs/screenshots/v0.2-whats-new-en.png) |
+| TEST BUILD v0.2.0-beta.1: избор на маршрут (синтетичен каталог) | TEST BUILD v0.2.0-beta.1: „Какво е новото“ |
+| ![„За проекта“ в TEST BUILD v0.2.0-beta.1 на български](docs/screenshots/v0.2-about-bg.png) | ![„За проекта“ в TEST BUILD v0.2.0-beta.1 на английски](docs/screenshots/v0.2-about-en.png) |
+| TEST BUILD v0.2.0-beta.1: За проекта (BG) | TEST BUILD v0.2.0-beta.1: За проекта (EN) |
 
 ## Обратна връзка
 

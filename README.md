@@ -90,7 +90,13 @@ Tested on Debian 13 XFCE.
 
 ## Download and install
 
-> **v0.1.1-beta (pre-release)** is available under [Releases](../../releases/tag/v0.1.1-beta). Download `war-of-machines-0.1.1-beta-linux-x86_64.tar.gz` and `SHA256SUMS`.
+| Release | Label | Download |
+|---|---|---|
+| **v0.1.1-beta** | Public beta (pre-release) — the current recommended build | [Releases → v0.1.1-beta](../../releases/tag/v0.1.1-beta): `war-of-machines-0.1.1-beta-linux-x86_64.tar.gz` + `SHA256SUMS` |
+| **v0.2.0-beta.1** | **TEST BUILD / Само за тестване** (pre-release, for testers) — Universal AI Pool: access routes per model | [Releases → v0.2.0-beta.1](../../releases/tag/v0.2.0-beta.1): `war-of-machines-0.2.0-beta.1-linux-x86_64.tar.gz` + `SHA256SUMS` |
+
+The TEST BUILD adds new routes that are **experimental**: Hugging Face, OpenRouter "Check limits", DeepSeek and OpenRouter chat were tested only against local fake servers. Sign in with ChatGPT is not available; Mode B is not implemented. Installing v0.2.0-beta.1 over v0.1.1-beta keeps your history (old records show the route as "Unknown"). See [CHANGELOG.md](CHANGELOG.md) / [CHANGELOG_BG.md](CHANGELOG_BG.md).
+
 
 v0.1.1-beta is a **standalone compiled program for Linux x86_64**.
 - It needs no Python and downloads nothing during installation.
@@ -115,6 +121,8 @@ cd war-of-machines-0.1.1-beta-linux-x86_64
 war-of-machines
 ```
 
+For the TEST BUILD, use the same steps with `war-of-machines-0.2.0-beta.1-linux-x86_64` (its own `SHA256SUMS`).
+
 - **Where it installs.** `install.sh` installs into `~/.local/share/war-of-machines` and adds a menu entry. It moves an older install aside and never deletes your data.
 - **Uninstall.** `./uninstall.sh` removes the program and keeps your data.
 - **Source code archives.** The "Source code" archives that GitHub adds automatically to every release contain only this project page, not the application.
@@ -131,6 +139,10 @@ All screenshots use **synthetic demo data** and fake keys.
 | Providers (EN) | About (EN) |
 | ![Mode A result produced by the simulator, marked as not real AI](docs/screenshots/mode-a-simulator-result-en.png) | |
 | Mode A result with the simulator (not real AI) | |
+| ![TEST BUILD v0.2.0-beta.1 route picker with synthetic catalog data](docs/screenshots/v0.2-route-picker-en.png) | ![TEST BUILD v0.2.0-beta.1 What's New window](docs/screenshots/v0.2-whats-new-en.png) |
+| TEST BUILD v0.2.0-beta.1: route picker (synthetic catalog) | TEST BUILD v0.2.0-beta.1: What's New |
+| ![TEST BUILD v0.2.0-beta.1 About in English](docs/screenshots/v0.2-about-en.png) | ![TEST BUILD v0.2.0-beta.1 About in Bulgarian](docs/screenshots/v0.2-about-bg.png) |
+| TEST BUILD v0.2.0-beta.1: About (EN) | TEST BUILD v0.2.0-beta.1: About (BG) |
 
 ## Feedback
 
