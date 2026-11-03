@@ -6,9 +6,11 @@
 
 <p align="center">War of Machines не събира телеметрия, потребителски разговори, API ключове или история на използването за RitualForge Labs. Данните на приложението се съхраняват локално. При използване на облачни AI модели избраните заявки се изпращат директно към съответния доставчик.</p>
 
-<p align="center"><code>No telemetry · No tracking · Local-first · Your API keys · Your data</code><br><a href="PRIVACY_BG.md">Политика за поверителност (BG)</a> · <a href="PRIVACY_EN.md">Privacy policy (EN)</a></p>
+<p align="center"><code>Local-first · No telemetry · No tracking · User-controlled data</code><br><a href="PRIVACY_BG.md">Политика за поверителност (BG)</a> · <a href="PRIVACY_EN.md">Privacy policy (EN)</a></p>
 
 <p align="center"><a href="README.md">English</a> · <b>Български</b></p>
+
+<p align="center"><a href="https://github.com/PhoenixbgOrg/war-of-machines/releases/download/v0.2.0-beta.2/war-of-machines-0.2.0-beta.2-linux-x86_64.tar.gz"><b>⬇ ИЗТЕГЛИ ЗА LINUX</b></a> · <b>ИЗТЕГЛИ ЗА WINDOWS</b>: все още не е налично · <a href="https://github.com/PhoenixbgOrg/war-of-machines/releases/tag/v0.2.0-beta.2"><b>ИЗПРОБВАЙ ТЕСТОВАТА ВЕРСИЯ</b></a> · <a href="https://github.com/PhoenixbgOrg/war-of-machines/issues/new?template=bug_report.md"><b>ДОКЛАДВАЙ БЪГ</b></a> · <a href="https://github.com/PhoenixbgOrg/war-of-machines/issues/new?template=feature_request.md"><b>ПРЕДЛОЖИ ПОДОБРЕНИЕ</b></a></p>
 
 # War of Machines — Войната на машините
 
@@ -77,7 +79,7 @@
 
 | Област | Състояние |
 |---|---|
-| Автоматизирани тестове | **v0.2.0-beta.1 (тестова компилация):** 161 успешни / 2 пропуснати, плюс компилиран GUI тест 28/28. **v0.1.1-beta:** 119 успешни / 1 пропуснат на кандидата (бележките към изданието посочват 133 теста за компилацията, включително проверки на пакета). Всички офлайн, с фалшиви локални сървъри |
+| Автоматизирани тестове | **v0.2.0-beta.2 (тестова компилация):** 181 успешни / 2 пропуснати на Linux (Python 3.11, 3.12, 3.13 в CI) и 179 успешни / 4 пропуснати на CI машина с Windows Server 2025 (пропуснати са тестовете само за Linux инсталатора), плюс GUI смоук тест 28/28 и проверки за инсталиране/надграждане на компилираната версия за Linux. **v0.2.0-beta.1 (тестова компилация):** 161 успешни / 2 пропуснати, плюс компилиран GUI тест 28/28. **v0.1.1-beta:** 119 успешни / 1 пропуснат на кандидата (бележките към изданието посочват 133 теста за компилацията, включително проверки на пакета). Всички офлайн, с фалшиви локални сървъри |
 | Платени разговори между няколко реални облачни модела | ✅ Проверено ръчно от собственика (съобщено на 2026-11-02, не е автоматизирано) |
 | Anthropic, Google Gemini, Mistral с реални ключове | ✅ Проверено ръчно от собственика (съобщено на 2026-11-02, не е автоматизирано) |
 | Списък с модели на OpenAI с реален ключ | ✅ Проверено от собственика (2026-10-30) |
@@ -89,11 +91,34 @@
 
 Tested on Debian 13 XFCE. (Тествано на Debian 13 XFCE.)
 
+## Бърз старт за начинаещи (ТЕСТОВА КОМПИЛАЦИЯ v0.2.0-beta.2, Linux)
+
+1. Отворете [страницата на v0.2.0-beta.2](https://github.com/PhoenixbgOrg/war-of-machines/releases/tag/v0.2.0-beta.2) и изтеглете `war-of-machines-0.2.0-beta.2-linux-x86_64.tar.gz` и `SHA256SUMS` в една папка. (Архивите „Source code“ на страницата **не са** инсталационни пакети.)
+2. Отворете терминал в тази папка и проверете файла: `sha256sum -c SHA256SUMS` трябва да изпише `OK`.
+3. Разархивирайте и инсталирайте (без root):
+   ```bash
+   tar xzf war-of-machines-0.2.0-beta.2-linux-x86_64.tar.gz
+   cd war-of-machines-0.2.0-beta.2-linux-x86_64
+   ./install.sh
+   ```
+4. Стартирайте от менюто или с `war-of-machines`. Създайте локалния акаунт на собственика, после отворете **Доставчици и модели**, добавете API ключ и натиснете **Обнови моделите**. Без ключове можете да пробвате Режим A с вградения **симулатор** (не е истински ИИ).
+5. Инсталирането върху v0.2.0-beta.1 или v0.1.1-beta запазва данните и историята.
+
+**Windows:** все още не е налично. Тества се преносима версия за Windows; когато бъде публикувана, Windows може да покаже предупреждение SmartScreen („Windows защити компютъра ви“), защото програмата не е подписана — първо проверете SHA-256 и само ако съвпада изберете „Повече информация → Изпълни въпреки това“.
+
+### Известни бъгове и ограничения (v0.2.0-beta.2)
+- Hugging Face, OpenRouter, DeepSeek и собственият OpenAI-съвместим адрес са тествани само с локални фалшиви сървъри (експериментално).
+- Режим B / Consensus Engine v0.4 не е реализиран. Симулаторът не е истински ИИ.
+- Вход с ChatGPT не е наличен.
+- Тествано само на Debian 13 XFCE; други дистрибуции, Wayland и HiDPI не са тествани.
+- Съобщете за всичко друго чрез **[ДОКЛАДВАЙ БЪГ](https://github.com/PhoenixbgOrg/war-of-machines/issues/new?template=bug_report.md)** или **[тест за съвместимост](https://github.com/PhoenixbgOrg/war-of-machines/issues/new?template=compatibility_test.md)**.
+
 ## Изтегляне и инсталиране
 
 | Издание | Етикет | Изтегляне |
 |---|---|---|
 | **v0.1.1-beta** | Публична бета (предварително издание) — препоръчваната текуща версия | [Releases → v0.1.1-beta](../../releases/tag/v0.1.1-beta): `war-of-machines-0.1.1-beta-linux-x86_64.tar.gz` + `SHA256SUMS` |
+| **v0.2.0-beta.2** | **TEST BUILD / Само за тестване** (предварително издание) — Поправки и подобрения на интерфейса | [Releases → v0.2.0-beta.2](../../releases/tag/v0.2.0-beta.2): `war-of-machines-0.2.0-beta.2-linux-x86_64.tar.gz` + `SHA256SUMS` |
 | **v0.2.0-beta.1** | **TEST BUILD / Само за тестване** (предварително издание, за тестери) — Universal AI Pool: маршрути за достъп за всеки модел | [Releases → v0.2.0-beta.1](../../releases/tag/v0.2.0-beta.1): `war-of-machines-0.2.0-beta.1-linux-x86_64.tar.gz` + `SHA256SUMS` |
 
 Тестовата компилация добавя нови маршрути, които са **експериментални**: Hugging Face, „Провери лимитите“ на OpenRouter, DeepSeek и чат през OpenRouter са тествани само с локални фалшиви сървъри. Sign in with ChatGPT не е наличен; режим B не е реализиран. Инсталирането на v0.2.0-beta.1 върху v0.1.1-beta запазва историята (старите записи показват маршрута като „Неизвестно“). Вижте [CHANGELOG_BG.md](CHANGELOG_BG.md) / [CHANGELOG.md](CHANGELOG.md).

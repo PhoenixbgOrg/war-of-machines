@@ -9,6 +9,8 @@ labels: bug
 
 **Version (About window) / Версия:**
 
+**Package (Linux tar.gz / Windows ZIP) / Пакет:**
+
 **OS / Операционна система:**
 
 **What happened / Какво се случи:**

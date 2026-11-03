@@ -2,6 +2,27 @@
 
 Bulgarian: [CHANGELOG_BG.md](CHANGELOG_BG.md)
 
+## 0.2.0-beta.2 — 2026-11-03 (TEST BUILD, pre-release) — Bugfix & UX Improvements
+Fixed:
+- "Remove participant" removed only the LAST row; every participant now has its own Remove button (the selected/clicked one is removed).
+- Chosen routes were keyed by row number and could end up on the wrong participant after removing or reordering; routes now travel with their participant.
+- Removing a participant was not saved; the "starting participant" limit was not updated and was not remembered after restart.
+- The global "Route…" button silently used participant 1 when no row was selected; route choice is now per row, with a clear message.
+- Changing a participant's provider kept the old (now invalid) route.
+- Start/Resume could launch a second discussion while one was running; Pause/Stop/View/Resume did nothing silently when no discussion was active — they now explain why.
+- Model lists were kept in memory only (lost on restart, no time, no stale marking).
+- An invalid model-list response from a provider was treated as an empty list; it is now reported as "unexpected response".
+Improved:
+- Participants: add, remove, duplicate (the same model may take part more than once), move up/down; changes save automatically ("✔ saved HH:MM:SS") and are restored after restart; task history is never changed.
+- Clear explanation when there are fewer than 2 participants (Mode A needs at least 2); no unexplained disabled buttons (tooltips say why).
+- New "Providers and models" window: status per provider (connected / not connected / error / unavailable / experimental), last update time, "Refresh models" per provider or for all connected, local model cache (models_cache.json, no keys) with stale marking, search by model or provider, filters local / free / paid / experimental, explicit "Add selected model as participant" (discovery never adds anything automatically).
+- Manual model ID entry is always possible.
+- Route picker: filter by local / free / limited / paid / experimental / usable.
+- Custom OpenAI-compatible endpoint (EXPERIMENTAL): only the address you enter; https, or http only for 127.0.0.1/localhost; no network until you press "Refresh models" or "Start"; optional key (Windows Credential Manager / Linux keyring); compatibility is not guaranteed.
+- Windows: data directory defaults to %LOCALAPPDATA%\WarOfMachines\data (Linux unchanged).
+- Tested with real providers by the owner: Anthropic, Gemini, Mistral. Hugging Face, OpenRouter, DeepSeek and the custom endpoint: fake servers only.
+- Mode B / Consensus Engine v0.4: still not implemented.
+
 ## 0.2.0-beta.1 — 2026-11-03 (TEST BUILD, pre-release)
 - Universal AI Pool: access-route catalog per model (OpenRouter, Hugging Face, Ollama, direct vendors); labels free / limited quota / subscription / paid / local / unknown / not available; "Unknown" instead of invented prices.
 - Catalog refresh only via the Refresh buttons; time of the last successful check shown; stale data clearly marked when a catalog is unreachable.

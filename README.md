@@ -6,9 +6,11 @@
 
 <p align="center">War of Machines does not collect telemetry, user conversations, API keys, or usage history for RitualForge Labs. Application data is stored locally. When cloud AI models are used, selected requests are sent directly to the respective provider.</p>
 
-<p align="center"><code>No telemetry · No tracking · Local-first · Your API keys · Your data</code><br><a href="PRIVACY_EN.md">Privacy policy (EN)</a> · <a href="PRIVACY_BG.md">Политика за поверителност (BG)</a></p>
+<p align="center"><code>Local-first · No telemetry · No tracking · User-controlled data</code><br><a href="PRIVACY_EN.md">Privacy policy (EN)</a> · <a href="PRIVACY_BG.md">Политика за поверителност (BG)</a></p>
 
 <p align="center"><b>English</b> · <a href="README_BG.md">Български</a></p>
+
+<p align="center"><a href="https://github.com/PhoenixbgOrg/war-of-machines/releases/download/v0.2.0-beta.2/war-of-machines-0.2.0-beta.2-linux-x86_64.tar.gz"><b>⬇ DOWNLOAD FOR LINUX</b></a> · <b>DOWNLOAD FOR WINDOWS</b>: not yet available · <a href="https://github.com/PhoenixbgOrg/war-of-machines/releases/tag/v0.2.0-beta.2"><b>TRY THE TEST BUILD</b></a> · <a href="https://github.com/PhoenixbgOrg/war-of-machines/issues/new?template=bug_report.md"><b>REPORT BUG</b></a> · <a href="https://github.com/PhoenixbgOrg/war-of-machines/issues/new?template=feature_request.md"><b>REQUEST FEATURE</b></a></p>
 
 # War of Machines
 
@@ -77,7 +79,7 @@ The application also contains a **SIMULATION** provider for trying the interface
 
 | Area | Status |
 |---|---|
-| Automated tests | **v0.2.0-beta.1 (TEST BUILD):** 161 passed / 2 skipped, plus a 28/28 compiled GUI smoke test. **v0.1.1-beta:** 119 passed / 1 skipped on the release candidate (its release notes count 133 tests for the compiled build, including packaging checks). All offline, with fake local servers |
+| Automated tests | **v0.2.0-beta.2 (TEST BUILD):** 181 passed / 2 skipped on Linux (Python 3.11, 3.12, 3.13 in CI) and 179 passed / 4 skipped on a Windows Server 2025 CI runner (Linux-only installer tests skipped), plus a 28/28 GUI smoke test and install/upgrade checks of the compiled Linux build. **v0.2.0-beta.1 (TEST BUILD):** 161 passed / 2 skipped, plus a 28/28 compiled GUI smoke test. **v0.1.1-beta:** 119 passed / 1 skipped on the release candidate (its release notes count 133 tests for the compiled build, including packaging checks). All offline, with fake local servers |
 | Paid multi-model conversations with real cloud models | ✅ Manually verified by the owner (reported 2026-11-02, not automated) |
 | Anthropic, Google Gemini, Mistral with real keys | ✅ Manually verified by the owner (reported 2026-11-02, not automated) |
 | OpenAI model list with a real key | ✅ Verified by the owner (2026-10-30) |
@@ -89,11 +91,34 @@ The application also contains a **SIMULATION** provider for trying the interface
 
 Tested on Debian 13 XFCE.
 
+## Quick start for beginners (TEST BUILD v0.2.0-beta.2, Linux)
+
+1. Open the [v0.2.0-beta.2 release page](https://github.com/PhoenixbgOrg/war-of-machines/releases/tag/v0.2.0-beta.2) and download `war-of-machines-0.2.0-beta.2-linux-x86_64.tar.gz` and `SHA256SUMS` into the same folder. (The "Source code" archives on the release page are **not** install packages.)
+2. Open a terminal in that folder and check the download: `sha256sum -c SHA256SUMS` must print `OK`.
+3. Unpack and install (no root needed):
+   ```bash
+   tar xzf war-of-machines-0.2.0-beta.2-linux-x86_64.tar.gz
+   cd war-of-machines-0.2.0-beta.2-linux-x86_64
+   ./install.sh
+   ```
+4. Start it from the menu or with `war-of-machines`. Create the local owner account, then open **Providers and models** to add an API key and press **Refresh models**. Without keys you can still try Mode A with the built-in **simulator** (not real AI).
+5. Installing over v0.2.0-beta.1 or v0.1.1-beta keeps your data and history.
+
+**Windows:** not yet available. A portable Windows build is being tested; when it is published, Windows may show a SmartScreen warning ("Windows protected your PC") because the program is not code-signed — check the SHA-256 first, then choose "More info → Run anyway" only if it matches.
+
+### Known bugs and limitations (v0.2.0-beta.2)
+- Hugging Face, OpenRouter, DeepSeek and the custom OpenAI-compatible endpoint were tested only against local fake servers (experimental).
+- Mode B / Consensus Engine v0.4 is not implemented. The simulator is not real AI.
+- Sign in with ChatGPT is not available.
+- Tested on Debian 13 XFCE only; other distributions, Wayland and HiDPI are untested.
+- Please report anything else with **[REPORT BUG](https://github.com/PhoenixbgOrg/war-of-machines/issues/new?template=bug_report.md)** or a **[compatibility test](https://github.com/PhoenixbgOrg/war-of-machines/issues/new?template=compatibility_test.md)**.
+
 ## Download and install
 
 | Release | Label | Download |
 |---|---|---|
 | **v0.1.1-beta** | Public beta (pre-release) — the current recommended build | [Releases → v0.1.1-beta](../../releases/tag/v0.1.1-beta): `war-of-machines-0.1.1-beta-linux-x86_64.tar.gz` + `SHA256SUMS` |
+| **v0.2.0-beta.2** | **TEST BUILD / Само за тестване** (pre-release) — Bugfix & UX Improvements | [Releases → v0.2.0-beta.2](../../releases/tag/v0.2.0-beta.2): `war-of-machines-0.2.0-beta.2-linux-x86_64.tar.gz` + `SHA256SUMS` |
 | **v0.2.0-beta.1** | **TEST BUILD / Само за тестване** (pre-release, for testers) — Universal AI Pool: access routes per model | [Releases → v0.2.0-beta.1](../../releases/tag/v0.2.0-beta.1): `war-of-machines-0.2.0-beta.1-linux-x86_64.tar.gz` + `SHA256SUMS` |
 
 The TEST BUILD adds new routes that are **experimental**: Hugging Face, OpenRouter "Check limits", DeepSeek and OpenRouter chat were tested only against local fake servers. Sign in with ChatGPT is not available; Mode B is not implemented. Installing v0.2.0-beta.1 over v0.1.1-beta keeps your history (old records show the route as "Unknown"). See [CHANGELOG.md](CHANGELOG.md) / [CHANGELOG_BG.md](CHANGELOG_BG.md).
