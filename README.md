@@ -60,7 +60,7 @@ When several models agree, that is **not proof that the answer is factually corr
 
 ## Providers and models
 
-Supported providers: **OpenAI**, **xAI**, **Anthropic**, **Google Gemini**, **Mistral**, **DeepSeek**, **OpenRouter**, and optionally **local Ollama** (runs on your machine, no key needed).
+Supported providers: **OpenAI**, **xAI**, **Anthropic**, **Google Gemini**, **Mistral**, **DeepSeek**, **OpenRouter**, and optionally **local Ollama** (runs on your machine, no key needed). The v0.2.0-beta.1 TEST BUILD adds **Hugging Face Inference Providers** (experimental) and per-model **access routes** (Universal AI Pool).
 
 The **model catalog is dynamic**: available models are loaded from each provider when you ask, so new models appear without an application update.
 
@@ -77,13 +77,14 @@ The application also contains a **SIMULATION** provider for trying the interface
 
 | Area | Status |
 |---|---|
-| Automated tests | 119 passed / 1 skipped on the v0.1.1-beta release candidate (117 / 1 on the development baseline); offline, with fake local servers |
+| Automated tests | **v0.2.0-beta.1 (TEST BUILD):** 161 passed / 2 skipped, plus a 28/28 compiled GUI smoke test. **v0.1.1-beta:** 119 passed / 1 skipped on the release candidate (its release notes count 133 tests for the compiled build, including packaging checks). All offline, with fake local servers |
 | Paid multi-model conversations with real cloud models | ✅ Manually verified by the owner (reported 2026-11-02, not automated) |
 | Anthropic, Google Gemini, Mistral with real keys | ✅ Manually verified by the owner (reported 2026-11-02, not automated) |
 | OpenAI model list with a real key | ✅ Verified by the owner (2026-10-30) |
 | xAI model list with a real key | ✅ Verified by the owner (HTTP 403 until the account was funded) |
 | GNOME Keyring storage | ✅ Verified by the owner |
 | DeepSeek, OpenRouter with real keys | ❌ Not verified (tested only against a local fake server) |
+| v0.2 routes: Hugging Face, OpenRouter "Check limits", OpenRouter chat | ❌ Not verified with real accounts (local fake servers only; experimental) |
 | Windows, other Linux distributions | ❌ Not verified |
 
 Tested on Debian 13 XFCE.

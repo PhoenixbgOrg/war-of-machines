@@ -44,6 +44,13 @@ When you start a discussion with cloud models (OpenAI, xAI, Anthropic, Google Ge
 
 The same direct connection is used when you click "Check" in the provider settings to list the available models.
 
+**Access routes (v0.2, test build).** Public model catalogs (OpenRouter, Hugging Face, local Ollama) are downloaded **only when you click "Refresh"** — never in the background or on a timer. The time of the last successful check is shown; if a catalog cannot be reached, the last saved copy is shown and marked as stale. The catalog cache is a local file in your data folder and contains no keys.
+- **Hosts contacted by the route-catalog "Refresh":** only `openrouter.ai` (public model list), `huggingface.co` (public model list) and, for local Ollama, `127.0.0.1:11434`. Conversations go only to the provider/route you selected.
+- **OpenRouter "Check limits"** sends one request (GET /api/v1/key) with your OpenRouter key, only when you click it. The result is shown and not stored; it is not a guaranteed balance.
+- **Hugging Face Inference Providers** (router.huggingface.co, experimental) is used only if you choose it and enter your own token. Hugging Face and the inference provider process the request under their terms; usage may be billed even with a Hugging Face account.
+- **Gemini free tier:** Google may use submitted content to improve its products. War of Machines asks for your explicit consent before the first use, stores only that choice (in your local settings), and lets you revoke it in "Route…". History and files are never sent automatically.
+- **Sign in with ChatGPT** is not active; no sign-in or tokens are used. War of Machines never reads, copies or extracts browser or ChatGPT session cookies or tokens.
+
 ## 4. Ollama (local models)
 - In local mode (the default address is `http://127.0.0.1:11434`), requests go only to the Ollama server on your own computer. Nothing is sent to the cloud.
 - If you change the Ollama address yourself, requests go to the address you set.
@@ -77,6 +84,7 @@ The optional local HTTP API (start option `--api`) listens only on `127.0.0.1` (
 If you choose to contact us, these services process your personal data under their own terms. This includes at least your e-mail address, your GitHub account and any content you include.
 - e-mail to info@ritualforgelabs.com;
 - a GitHub Issue;
+- the optional "Does this route work?" report: on click it only opens a prefilled GitHub Issue or e-mail in your own browser or mail program. It contains only the fields you see and can edit (provider, route, model id, app version, optional OS family, result) — no conversations, keys or file paths. Nothing is sent unless you submit it yourself;
 - a PayPal payment.
 
 Please do not include API keys, private conversations or personal paths in bug reports or screenshots.

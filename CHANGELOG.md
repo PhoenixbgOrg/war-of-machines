@@ -7,7 +7,7 @@ Bulgarian: [CHANGELOG_BG.md](CHANGELOG_BG.md)
 - Catalog refresh only via the Refresh buttons; time of the last successful check shown; stale data clearly marked when a catalog is unreachable.
 - Route picker per participant ("Route…"); paid or unknown-cost routes need confirmation; never an automatic switch to a paid route.
 - The participant setup (provider, model, chosen route) is saved locally and restored after closing and reopening the program (no keys are stored there).
-- Hugging Face monthly credits are no longer hardcoded: shown as "Unknown" with a link to your HF billing page (HF removed included credits for free users on 2026-10-07).
+- Hugging Face monthly credits are no longer hardcoded: shown as "Unknown" with a link to your HF billing page (per the official pricing page https://huggingface.co/docs/inference-providers/en/pricing, checked 2026-11-03: free users have no included monthly credits; PRO users and Team/Enterprise seats get $2.00/month; verify on your Hugging Face billing page).
 - Exact provider / model / route recorded for every message (additive DB migration; old history kept and shown as "Unknown"); shown in the discussion view and export.
 - Hugging Face Inference Providers (router.huggingface.co/v1) as a provider — EXPERIMENTAL (tested with fake servers only). Labels: free credits / paid usage / own provider key / unknown.
 - OpenRouter "Check limits" (GET /api/v1/key) — key credit limit, remaining, free-model daily requests; clear 402/429 messages; missing values shown as "Unknown".
