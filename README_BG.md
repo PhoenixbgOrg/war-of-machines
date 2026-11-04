@@ -10,7 +10,7 @@
 
 <p align="center"><a href="README.md">English</a> · <b>Български</b></p>
 
-<p align="center"><a href="https://github.com/PhoenixbgOrg/war-of-machines/releases/download/v0.2.0-beta.2/war-of-machines-0.2.0-beta.2-linux-x86_64.tar.gz"><b>⬇ ИЗТЕГЛИ ЗА LINUX</b></a> · <b>ИЗТЕГЛИ ЗА WINDOWS</b>: все още не е налично · <a href="https://github.com/PhoenixbgOrg/war-of-machines/releases/tag/v0.2.0-beta.2"><b>ИЗПРОБВАЙ ТЕСТОВАТА ВЕРСИЯ</b></a> · <a href="https://github.com/PhoenixbgOrg/war-of-machines/issues/new?template=bug_report.md"><b>ДОКЛАДВАЙ БЪГ</b></a> · <a href="https://github.com/PhoenixbgOrg/war-of-machines/issues/new?template=feature_request.md"><b>ПРЕДЛОЖИ ПОДОБРЕНИЕ</b></a></p>
+<p align="center"><a href="https://github.com/PhoenixbgOrg/war-of-machines/releases/download/v0.2.0-beta.2/war-of-machines-0.2.0-beta.2-linux-x86_64.tar.gz"><b>⬇ ИЗТЕГЛИ ЗА LINUX</b></a> · <a href="https://github.com/PhoenixbgOrg/war-of-machines/releases/download/v0.2.0-beta.2/war-of-machines-0.2.0-beta.2-windows-x64.zip"><b>⬇ ИЗТЕГЛИ ЗА WINDOWS (експериментално)</b></a> · <a href="https://github.com/PhoenixbgOrg/war-of-machines/releases/tag/v0.2.0-beta.2"><b>ИЗПРОБВАЙ ТЕСТОВАТА ВЕРСИЯ</b></a> · <a href="https://github.com/PhoenixbgOrg/war-of-machines/issues/new?template=bug_report.md"><b>ДОКЛАДВАЙ БЪГ</b></a> · <a href="https://github.com/PhoenixbgOrg/war-of-machines/issues/new?template=feature_request.md"><b>ПРЕДЛОЖИ ПОДОБРЕНИЕ</b></a></p>
 
 # War of Machines — Войната на машините
 
@@ -87,7 +87,8 @@
 | Съхранение в GNOME Keyring | ✅ Проверено от собственика |
 | DeepSeek, OpenRouter с реални ключове | ❌ Не е проверено (само с локален фалшив сървър) |
 | Маршрути от v0.2: Hugging Face, „Провери лимитите“ на OpenRouter, чат през OpenRouter | ❌ Не е проверено с реални акаунти (само с локални фалшиви сървъри; експериментално) |
-| Windows, други Linux дистрибуции | ❌ Не е проверено |
+| Windows x64 преносима версия | ⚠️ Тествано само на CI машини Windows Server 2025/2022; Windows 11/10 предстои |
+| Други Linux дистрибуции | ❌ Не е проверено |
 
 Tested on Debian 13 XFCE. (Тествано на Debian 13 XFCE.)
 
@@ -104,7 +105,18 @@ Tested on Debian 13 XFCE. (Тествано на Debian 13 XFCE.)
 4. Стартирайте от менюто или с `war-of-machines`. Създайте локалния акаунт на собственика, после отворете **Доставчици и модели**, добавете API ключ и натиснете **Обнови моделите**. Без ключове можете да пробвате Режим A с вградения **симулатор** (не е истински ИИ).
 5. Инсталирането върху v0.2.0-beta.1 или v0.1.1-beta запазва данните и историята.
 
-**Windows:** все още не е налично (планирани: Windows 11 x64 и Windows 10 22H2 x64; Windows 10 е извън стандартната поддръжка на Microsoft — тестовете са добре дошли, но не е проверено). Тества се преносима версия за Windows; когато бъде публикувана, Windows може да покаже предупреждение SmartScreen („Windows защити компютъра ви“), защото програмата не е подписана — първо проверете SHA-256 и само ако съвпада изберете „Повече информация → Изпълни въпреки това“.
+**Windows x64 (ЕКСПЕРИМЕНТАЛНО / ТЕСТОВА КОМПИЛАЦИЯ):** [war-of-machines-0.2.0-beta.2-windows-x64.zip](https://github.com/PhoenixbgOrg/war-of-machines/releases/download/v0.2.0-beta.2/war-of-machines-0.2.0-beta.2-windows-x64.zip) · [SHA256SUMS-windows.txt](https://github.com/PhoenixbgOrg/war-of-machines/releases/download/v0.2.0-beta.2/SHA256SUMS-windows.txt)
+SHA-256: `1ecaf8342b2822200964cad7f099543b4a352f13dce5b87f0084f6db1682ff45`
+
+1. Проверете файла в PowerShell: `Get-FileHash .\war-of-machines-0.2.0-beta.2-windows-x64.zip -Algorithm SHA256` — стойността трябва да съвпада с горната.
+2. Разархивирайте в обикновена папка (напр. Документи). Версията е преносима: без инсталатор и без администраторски права.
+3. Отворете папката и стартирайте `war-of-machines.exe`.
+
+- Тествано само на GitHub Actions машини: Windows Server 2025 (10.0.26100) и Windows Server 2022 (10.0.20348), x64. **Windows 11 и Windows 10 (22H2): предстои ръчно тестване**; Windows 10 е извън стандартната поддръжка на Microsoft. Докладите за съвместимост са добре дошли.
+- Програмата не е цифрово подписана, затова Windows SmartScreen може да покаже „Windows защити компютъра ви“. Първо проверете SHA-256; изборът „Повече информация → Изпълни въпреки това“ е ваше решение, само ако имате доверие на източника.
+- Данните се пазят в `%LOCALAPPDATA%\WarOfMachines\data`. Изтриването на папката на програмата не изтрива данните.
+- Qt / PySide6 са включени като отделни, непроменени DLL файлове под LGPL-3.0, които могат да се заменят; вижте `THIRD_PARTY_NOTICES.md` в архива.
+- Бутоните за ред Дублирай / Премахни / Нагоре са проверени на Windows само в компилиран тестов модул, не с кликане в истинския прозорец.
 
 ### Известни бъгове и ограничения (v0.2.0-beta.2)
 - Hugging Face, OpenRouter, DeepSeek и собственият OpenAI-съвместим адрес са тествани само с локални фалшиви сървъри (експериментално).

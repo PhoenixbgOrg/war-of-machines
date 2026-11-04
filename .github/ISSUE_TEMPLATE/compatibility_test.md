@@ -12,6 +12,10 @@ labels: compatibility
 
 **OS and version / ОС и версия:** (e.g. Debian 13 XFCE, Ubuntu 24.04 GNOME, Windows 11 24H2)
 
+**Windows edition, version and OS build / Издание, версия и компилация на Windows:** (Win+R → `winver`, e.g. Windows 11 Home 24H2, OS build 26100.xxxx)
+
+**SmartScreen warning shown / Показано ли е предупреждение SmartScreen:** yes / no
+
 **Desktop session / Сесия:** X11 / Wayland / Windows
 
 **Architecture / Архитектура:** (x86_64 / x64 / ARM64)

@@ -10,7 +10,7 @@
 
 <p align="center"><b>English</b> · <a href="README_BG.md">Български</a></p>
 
-<p align="center"><a href="https://github.com/PhoenixbgOrg/war-of-machines/releases/download/v0.2.0-beta.2/war-of-machines-0.2.0-beta.2-linux-x86_64.tar.gz"><b>⬇ DOWNLOAD FOR LINUX</b></a> · <b>DOWNLOAD FOR WINDOWS</b>: not yet available · <a href="https://github.com/PhoenixbgOrg/war-of-machines/releases/tag/v0.2.0-beta.2"><b>TRY THE TEST BUILD</b></a> · <a href="https://github.com/PhoenixbgOrg/war-of-machines/issues/new?template=bug_report.md"><b>REPORT BUG</b></a> · <a href="https://github.com/PhoenixbgOrg/war-of-machines/issues/new?template=feature_request.md"><b>REQUEST FEATURE</b></a></p>
+<p align="center"><a href="https://github.com/PhoenixbgOrg/war-of-machines/releases/download/v0.2.0-beta.2/war-of-machines-0.2.0-beta.2-linux-x86_64.tar.gz"><b>⬇ DOWNLOAD FOR LINUX</b></a> · <a href="https://github.com/PhoenixbgOrg/war-of-machines/releases/download/v0.2.0-beta.2/war-of-machines-0.2.0-beta.2-windows-x64.zip"><b>⬇ DOWNLOAD FOR WINDOWS (experimental)</b></a> · <a href="https://github.com/PhoenixbgOrg/war-of-machines/releases/tag/v0.2.0-beta.2"><b>TRY THE TEST BUILD</b></a> · <a href="https://github.com/PhoenixbgOrg/war-of-machines/issues/new?template=bug_report.md"><b>REPORT BUG</b></a> · <a href="https://github.com/PhoenixbgOrg/war-of-machines/issues/new?template=feature_request.md"><b>REQUEST FEATURE</b></a></p>
 
 # War of Machines
 
@@ -87,7 +87,8 @@ The application also contains a **SIMULATION** provider for trying the interface
 | GNOME Keyring storage | ✅ Verified by the owner |
 | DeepSeek, OpenRouter with real keys | ❌ Not verified (tested only against a local fake server) |
 | v0.2 routes: Hugging Face, OpenRouter "Check limits", OpenRouter chat | ❌ Not verified with real accounts (local fake servers only; experimental) |
-| Windows, other Linux distributions | ❌ Not verified |
+| Windows x64 portable | ⚠️ Tested on Windows Server 2025/2022 CI runners only; Windows 11/10 pending |
+| Other Linux distributions | ❌ Not verified |
 
 Tested on Debian 13 XFCE.
 
@@ -104,7 +105,18 @@ Tested on Debian 13 XFCE.
 4. Start it from the menu or with `war-of-machines`. Create the local owner account, then open **Providers and models** to add an API key and press **Refresh models**. Without keys you can still try Mode A with the built-in **simulator** (not real AI).
 5. Installing over v0.2.0-beta.1 or v0.1.1-beta keeps your data and history.
 
-**Windows:** not yet available (planned targets: Windows 11 x64 and Windows 10 22H2 x64; note that Windows 10 is past Microsoft's standard end of support — testing is welcome but it is unverified). A portable Windows build is being tested; when it is published, Windows may show a SmartScreen warning ("Windows protected your PC") because the program is not code-signed — check the SHA-256 first, then choose "More info → Run anyway" only if it matches.
+**Windows x64 (EXPERIMENTAL / TEST BUILD):** [war-of-machines-0.2.0-beta.2-windows-x64.zip](https://github.com/PhoenixbgOrg/war-of-machines/releases/download/v0.2.0-beta.2/war-of-machines-0.2.0-beta.2-windows-x64.zip) · [SHA256SUMS-windows.txt](https://github.com/PhoenixbgOrg/war-of-machines/releases/download/v0.2.0-beta.2/SHA256SUMS-windows.txt)
+SHA-256: `1ecaf8342b2822200964cad7f099543b4a352f13dce5b87f0084f6db1682ff45`
+
+1. Check the download in PowerShell: `Get-FileHash .\war-of-machines-0.2.0-beta.2-windows-x64.zip -Algorithm SHA256` — the value must match the one above.
+2. Extract the ZIP to a normal folder you own (e.g. Documents). It is portable: no installer, no admin rights needed.
+3. Open the extracted folder and run `war-of-machines.exe`.
+
+- Tested only on GitHub Actions runners: Windows Server 2025 (10.0.26100) and Windows Server 2022 (10.0.20348), x64. **Windows 11 and Windows 10 (22H2): manual testing pending**; Windows 10 is past Microsoft's standard end of support. Compatibility reports are welcome.
+- The program is not code-signed, so Windows SmartScreen may show "Windows protected your PC". Check the SHA-256 first; choosing "More info → Run anyway" is your own decision, only if you trust this source.
+- Your data is stored in `%LOCALAPPDATA%\WarOfMachines\data`. Deleting the program folder does not delete your data.
+- Qt / PySide6 are included as separate, unmodified LGPL-3.0 DLLs that can be replaced; see `THIRD_PARTY_NOTICES.md` inside the ZIP.
+- Per-row Duplicate / Remove / Move up buttons were checked only in a compiled test harness on Windows, not by clicking in the real window.
 
 ### Known bugs and limitations (v0.2.0-beta.2)
 - Hugging Face, OpenRouter, DeepSeek and the custom OpenAI-compatible endpoint were tested only against local fake servers (experimental).

@@ -3,6 +3,7 @@
 Bulgarian: [CHANGELOG_BG.md](CHANGELOG_BG.md)
 
 ## 0.2.0-beta.2 — 2026-11-03 (TEST BUILD, pre-release) — Bugfix & UX Improvements
+Windows x64 portable ZIP added on 2026-11-04 (EXPERIMENTAL; tested on Windows Server 2025/2022 CI runners only, Windows 11/10 pending; unsigned).
 Fixed:
 - "Remove participant" removed only the LAST row; every participant now has its own Remove button (the selected/clicked one is removed).
 - Chosen routes were keyed by row number and could end up on the wrong participant after removing or reordering; routes now travel with their participant.
